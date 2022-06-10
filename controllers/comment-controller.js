@@ -22,7 +22,7 @@ const commentController = {
   },
 
   removeComment({ params }, res) {
-    Comment.findOneAndDelete({ _id: params.id.commentId })
+    Comment.findOneAndDelete({ _id: params.commentId })
       .then((deletedComment) => {
         if (!deletedComment) {
           return res
